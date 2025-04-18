@@ -33,12 +33,16 @@ public abstract class Funcionario {
     }
     public void realizarLogin(String email, String senha) {
         if (this.email.equalsIgnoreCase(email) && this.senha.equals(senha))
-            System.out.println("Login efetuado com sucesso!");
+            System.out.println(this.getClass().getSimpleName() + " " +
+                    this.getNome() +
+                    " logado com sucesso!");
         else
             System.out.println("Email ou senha incorretos!");
     }
     public void realizarLogout() {
-        System.out.println("Logout efetuado com sucesso!");
+        System.out.println(this.getClass().getSimpleName() +
+                " " + this.getNome() +
+                " deslogado com sucesso!");
     }
     public void alterarDados(String nome, String email) {
         this.setNome(nome);

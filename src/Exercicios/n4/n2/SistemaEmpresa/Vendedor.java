@@ -13,7 +13,6 @@ public class Vendedor extends Funcionario {
         return getQuantidadeVendas();
     }
     public void RealizarVenda() {
-        System.out.println("Uma venda foi realizada com sucesso!");
         this.quantidadeVendas++;
     }
     public void alterarDados(String nome, String email, int quantidadeVendas) {

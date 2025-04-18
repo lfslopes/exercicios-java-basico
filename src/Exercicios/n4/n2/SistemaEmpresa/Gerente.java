@@ -17,7 +17,7 @@ public class Gerente extends Funcionario {
             valorTotalEmCaixa += atendente.getValorEmCaixa();
         }
         return "Quantidade de vendas realizadas: " + vendasTotais + "\n" +
-               "Quantidade total em caixa: " + valorTotalEmCaixa + "\n";
+               "Quantidade total em caixa: R$ " + String.format("%.2f", valorTotalEmCaixa) + "\n";
     }
     public int ConsultarVendas (Vendedor vendedor) {
         return vendedor.ConsultarVendas();

@@ -16,7 +16,6 @@ public class Atendente extends Funcionario {
     public void receberPagamento(double valorPago) {
         if (isCaixaOpen) {
             this.valorEmCaixa += valorPago;
-            System.out.println("Pagamento recebido com sucesso!");
             return;
         }
         System.out.println("Caixa fechado");
