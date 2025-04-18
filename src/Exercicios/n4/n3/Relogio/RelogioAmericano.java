@@ -28,7 +28,7 @@ public class RelogioAmericano extends Relogio {
 
     @Override
     public String getHorario() {
-        return this.getHorario() + ":" + this.getMinutos() + ":" + this.getSegundos();
+        return this.getHoras() + ":" + this.getMinutos() + ":" + this.getSegundos();
     }
     @Override
     public void setHorario(Relogio relogio) throws RelogioException {

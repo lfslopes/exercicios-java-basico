@@ -32,7 +32,7 @@ public class RelogioBrasileiro extends Relogio {
 
     @Override
     public String getHorario() {
-        return this.getHorario() + ":" + this.getMinutos() + ":" + this.getSegundos();
+        return this.getHoras() + ":" + this.getMinutos() + ":" + this.getSegundos();
     }
 
     @Override

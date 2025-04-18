@@ -8,15 +8,11 @@ public abstract class Relogio {
     private int segundos;
 
     public Relogio(int horas, int minutos, int segundos) {
-        try {
-            validarRelogio(horas, minutos, segundos);
-        } catch (RuntimeException e) {
-            throw new RelogioException("Input inválido para dados de um relogio");
-        } finally {
-            this.horas = horas;
-            this.minutos = minutos;
-            this.segundos = segundos;
-        }
+        if (!validarRelogio(horas, minutos, segundos))
+            throw new RelogioException("Formato de relógio inválido");
+        this.horas = horas;
+        this.minutos = minutos;
+        this.segundos = segundos;
     }
     protected abstract boolean validarRelogio(int horas, int minutos, int segundos);
     protected abstract boolean validarHora(int horas);
