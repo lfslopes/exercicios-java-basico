@@ -17,6 +17,22 @@ public abstract class Relogio {
         }
     }
     protected abstract boolean validarRelogio(int horas, int minutos, int segundos);
+    protected abstract boolean validarHora(int horas);
+    protected abstract boolean validarMinuto(int minutos);
+    protected abstract boolean validarSegundo(int segundos);
+
+    public void setHoras(int horas) {
+        this.horas = horas;
+    }
+
+    public void setMinutos(int minutos) {
+        this.minutos = minutos;
+    }
+
+    public void setSegundos(int segundos) {
+        this.segundos = segundos;
+    }
+
     public int getHoras() {
         return this.horas;
     }
@@ -28,4 +44,5 @@ public abstract class Relogio {
     }
 
     public abstract String getHorario();
+    public abstract void setHorario(Relogio relogio) throws RelogioException;
 }
