@@ -1,6 +1,6 @@
 package Exercicios.n4.n2.SistemaEmpresa;
 
-public class Funcionario {
+public abstract class Funcionario {
     private String nome;
     private String email;
     private String senha;
